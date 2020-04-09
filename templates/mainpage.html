@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>時間</th>
+                <th>名前</th>
+                <th>内容</th>
+            </tr>
+            {% for co in cont %}
+                <tr>
+                    <th>{{ co.id }}</th>
+                    <th>{{ co.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</th>
+                    <th>{{ co.name }}</th>
+                    <th>{{ co.content }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        <form action="/" method="POST">
+            <table>
+                <tr>
+                    <th>名前</th>
+                    <!--<th>パスワード</th>-->
+                    <th>内容</th>
+                </tr>
+                <tr>
+                    <th><input type="text" value="" placeholder="名前を入力してください" name="name"></th>
+                    <!--<th><input type="text" value="" placeholder="パスワードを入力してください" name="pass"></th>-->
+                    <th><input type="text" value="" placeholder="内容を入力してください。" name="content"></th>
+                </tr>
+            </table>
+            <input type="submit" value="sub">
+        </form>
+    </body>
+</html>
