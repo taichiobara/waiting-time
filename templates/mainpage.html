@@ -22,17 +22,30 @@
         <form action="/" method="POST">
             <table>
                 <tr>
-                    <th>名前</th>
+                    <th style="display:None;">名前</th>
                     <!--<th>パスワード</th>-->
-                    <th>内容</th>
+                    <th >混雑具合</th>
                 </tr>
                 <tr>
-                    <th><input type="text" value="" placeholder="名前を入力してください" name="name"></th>
+                    <th style="display:None;"><input type="text" value="a" placeholder="名前を入力してください" name="name"></th>
                     <!--<th><input type="text" value="" placeholder="パスワードを入力してください" name="pass"></th>-->
-                    <th><input type="text" value="" placeholder="内容を入力してください。" name="content"></th>
+                    <!--<th><input type="button" value="1" placeholder="内容を入力してください。" name="content"></th>
+                    <th><input type="button" value="2" placeholder="内容を入力してください。" name="content"></th>
+                    <th><input type="button" value="3" placeholder="内容を入力してください。" name="content"></th>
+                    <th><input type="button" value="4" placeholder="内容を入力してください。" name="content"></th>
+                    <th><input type="button" value="5" placeholder="内容を入力してください。" name="content"></th>-->
+                    
+                    <input type="radio" name="content" value=1 >1
+                    <input type="radio" name="content" value=2>2
+                    <input type="radio" name="content" value=3>3
+                    <input type="radio" name="content" value=4>4
+                    <input type="radio" name="content" value=5>5
+                    
+                    
                 </tr>
             </table>
-            <input type="submit" value="sub">
+            <!--<input type="submit" value="sub">-->
+            <button type="submit" formmethod="POST" >送信</button>
         </form>
     </body>
 </html>
